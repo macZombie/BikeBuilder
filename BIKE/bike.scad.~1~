@@ -1,0 +1,271 @@
+// Start of bike.scad
+$fn = 64 ;
+
+
+include <./SCADSource/wheel.scad>
+include <./SCADSource/trackEnd.scad>
+include <./SCADSource/forkEnd.scad>
+include <./SCADSource/tube.scad>
+include <./SCADSource/forkCrown.scad>
+include <./SCADSource/colours.scad>
+
+
+
+ 
+wheel(-405 ,700 , 130 );
+ 
+ 
+
+        
+// seatTube.drawPolar
+
+difference(){
+    
+    color("#D503FF") translate( [ 0.0 , 0.0 , 270.0 ] )  rotate( [0.0  , -14.0 , 0.0 ] ) scale( [ 1.0 , 1.0 , 1.0 ] ) cylinder( 546.0 , 14.5, 14.5 ) ;
+    
+    translate( [ 0.0 - 0.01 , 0.0 - 0.01 , 269.99 ] )  rotate( [0.0  , -14.0 , 0.0 ] ) scale( [ 1.0 , 1.0 , 1.0 ] )  cylinder( 546.0 + 0.02, 14.4, 14.4 ) ;
+
+    }
+
+
+        
+// seatTubeTop.drawPolar
+
+difference(){
+    
+    color("#D503FF") translate( [ -132.0893549974185 , 0.0 , 799.7814665466941 ] )  rotate( [0.0  , -14.0 , 0.0 ] ) scale( [ 1.0 , 1.0 , 1.0 ] ) cylinder( 25.0 , 14.5, 14.5 ) ;
+    
+    translate( [ -132.0893549974185 - 0.01 , 0.0 - 0.01 , 799.7714665466941 ] )  rotate( [0.0  , -14.0 , 0.0 ] ) scale( [ 1.0 , 1.0 , 1.0 ] )  cylinder( 25.0 + 0.02, 14.4, 14.4 ) ;
+
+    }
+
+
+        
+// topTube.drawPolar
+
+difference(){
+    
+    color("#D503FF") translate( [ -132.0893549974185 , 0.0 , 799.7814665466941 ] )  rotate( [0.0  , 90.0 , 0.0 ] ) scale( [ 1.0 , 1.0 , 1.0 ] ) cylinder( 570.0 , 14.5, 14.5 ) ;
+    
+    translate( [ -132.0893549974185 - 0.01 , 0.0 - 0.01 , 799.7714665466941 ] )  rotate( [0.0  , 90.0 , 0.0 ] ) scale( [ 1.0 , 1.0 , 1.0 ] )  cylinder( 570.0 + 0.02, 14.4, 14.4 ) ;
+
+    }
+
+
+        
+// headTube.drawPolar
+
+difference(){
+    
+    color("#D503FF") translate( [ 437.91064500258153 , 0.0 , 799.7814665466941 ] )  rotate( [0.0  , 164.0 , 0.0 ] ) scale( [ 1.0 , 1.0 , 1.0 ] ) cylinder( 60.0 , 18.5, 18.5 ) ;
+    
+    translate( [ 437.91064500258153 - 0.01 , 0.0 - 0.01 , 799.7714665466941 ] )  rotate( [0.0  , 164.0 , 0.0 ] ) scale( [ 1.0 , 1.0 , 1.0 ] )  cylinder( 60.0 + 0.02, 18.4, 18.4 ) ;
+
+    }
+
+
+        
+// headTubeTop.drawPolar
+
+difference(){
+    
+    color("#D503FF") translate( [ 437.91064500258153 , 0.0 , 799.7814665466941 ] )  rotate( [0.0  , -16.0 , 0.0 ] ) scale( [ 1.0 , 1.0 , 1.0 ] ) cylinder( 25.0 , 18.5, 18.5 ) ;
+    
+    translate( [ 437.91064500258153 - 0.01 , 0.0 - 0.01 , 799.7714665466941 ] )  rotate( [0.0  , -16.0 , 0.0 ] ) scale( [ 1.0 , 1.0 , 1.0 ] )  cylinder( 25.0 + 0.02, 18.4, 18.4 ) ;
+
+    }
+
+
+        
+// headTubeBottom.drawPolar
+
+difference(){
+    
+    color("#D503FF") translate( [ 454.44888635160146 , 0.0 , 742.1057647903949 ] )  rotate( [0.0  , 164.0 , 0.0 ] ) scale( [ 1.0 , 1.0 , 1.0 ] ) cylinder( 25.0 , 18.5, 18.5 ) ;
+    
+    translate( [ 454.44888635160146 - 0.01 , 0.0 - 0.01 , 742.0957647903949 ] )  rotate( [0.0  , 164.0 , 0.0 ] ) scale( [ 1.0 , 1.0 , 1.0 ] )  cylinder( 25.0 + 0.02, 18.4, 18.4 ) ;
+
+    }
+
+
+        
+// downTube.drawRect
+
+difference(){
+    
+    color("#D503FF") translate( [ 454.44888635160146 , 0.0 , 742.1057647903949 ] )  rotate( [0.0  , 136.09172424683646 , 180.0 ] )  scale( [ 1.0 , 1.0 , 1.0 ] ) cylinder( 655.2920291400884 , 16.5, 16.5 ) ;
+    
+    translate( [ 454.44888635160146 - 0.01 , 0.0 - 0.01 , 742.0957647903949 ] )  rotate( [0.0  , 136.09172424683646 , 180.0 ] ) scale( [ 1.0 , 1.0 , 1.0 ] ) cylinder( 655.2920291400884 + 0.02, 16.4, 16.4 ) ;
+
+    }
+
+
+        
+// bottomBracket.drawPolar
+
+difference(){
+    
+    color("#D503FF") translate( [ 0.0 , -34.0 , 270.0 ] )  rotate( [0.0  , 90.0 , 90.0 ] ) scale( [ 1.0 , 1.0 , 1.0 ] ) cylinder( 68.0 , 20.15, 20.15 ) ;
+    
+    translate( [ 0.0 - 0.01 , -34.0 - 0.01 , 269.99 ] )  rotate( [0.0  , 90.0 , 90.0 ] ) scale( [ 1.0 , 1.0 , 1.0 ] )  cylinder( 68.0 + 0.02, 18.15, 18.15 ) ;
+
+    }
+
+
+        
+// rightTrackEnd.draw 
+
+color("#D503FF") trackEnd( -405 , -65.0  , 350.0 ); 
+
+
+        
+// leftTrackEnd.draw 
+
+color("#D503FF") trackEnd( -405 , 65.0  , 350.0 ); 
+
+
+        
+// rightChainStay.drawRect
+
+difference(){
+    
+    color("#D503FF") translate( [ -365.0 , -65.0 , 350.0 ] )  rotate( [0.0  , 102.60273753604565 , 7.386190184919436 ] )  scale( [ 1.4 , 1.0 , 1.0 ] ) cylinder( 366.6531364927894 , 6.0, 12.5 ) ;
+    
+    translate( [ -365.0 - 0.01 , -65.0 - 0.01 , 349.99 ] )  rotate( [0.0  , 102.60273753604565 , 7.386190184919436 ] ) scale( [ 1.4 , 1.0 , 1.0 ] ) cylinder( 366.6531364927894 + 0.02, 5.9, 12.4 ) ;
+
+    }
+
+
+        
+// leftChainStay.drawRect
+
+difference(){
+    
+    color("#D503FF") translate( [ -365.0 , 65.0 , 350.0 ] )  rotate( [0.0  , 102.60273753604565 , -7.386190184919436 ] )  scale( [ 1.4 , 1.0 , 1.0 ] ) cylinder( 366.6531364927894 , 6.0, 12.5 ) ;
+    
+    translate( [ -365.0 - 0.01 , 65.0 - 0.01 , 349.99 ] )  rotate( [0.0  , 102.60273753604565 , -7.386190184919436 ] ) scale( [ 1.4 , 1.0 , 1.0 ] ) cylinder( 366.6531364927894 + 0.02, 5.9, 12.4 ) ;
+
+    }
+
+
+        
+// rightSeatStay.drawRect
+
+difference(){
+    
+    color("#D503FF") translate( [ -383.0 , -65.0 , 376.0 ] )  rotate( [0.0  , 34.79089610871845 , 11.903680232813043 ] )  scale( [ 1.0 , 1.0 , 1.0 ] ) cylinder( 467.31956811200877 , 7.5, 7.5 ) ;
+    
+    translate( [ -383.0 - 0.01 , -65.0 - 0.01 , 375.99 ] )  rotate( [0.0  , 34.79089610871845 , 11.903680232813043 ] ) scale( [ 1.0 , 1.0 , 1.0 ] ) cylinder( 467.31956811200877 + 0.02, 7.4, 7.4 ) ;
+
+    }
+
+
+        
+// leftSeatStay.drawRect
+
+difference(){
+    
+    color("#D503FF") translate( [ -383.0 , 65.0 , 376.0 ] )  rotate( [0.0  , 34.79089610871845 , -11.903680232813043 ] )  scale( [ 1.0 , 1.0 , 1.0 ] ) cylinder( 467.31956811200877 , 7.5, 7.5 ) ;
+    
+    translate( [ -383.0 - 0.01 , 65.0 - 0.01 , 375.99 ] )  rotate( [0.0  , 34.79089610871845 , -11.903680232813043 ] ) scale( [ 1.0 , 1.0 , 1.0 ] ) cylinder( 467.31956811200877 + 0.02, 7.4, 7.4 ) ;
+
+    }
+
+
+        
+// brakeBridge.drawPolar
+
+difference(){
+    
+    color("#D503FF") translate( [ -184.79884324099993 , -23.219168782334897 , 667.5401577864623 ] )  rotate( [0.0  , 90.0 , 90.0 ] ) scale( [ 1.0 , 1.0 , 1.0 ] ) cylinder( 50.0 , 6.0, 6.0 ) ;
+    
+    translate( [ -184.79884324099993 - 0.01 , -23.219168782334897 - 0.01 , 667.5301577864623 ] )  rotate( [0.0  , 90.0 , 90.0 ] ) scale( [ 1.0 , 1.0 , 1.0 ] )  cylinder( 50.0 + 0.02, 5.9, 5.9 ) ;
+
+    }
+
+
+        
+// steererTube.drawPolar
+
+difference(){
+    
+    color("#C0C0C0")  translate( [ 437.91064500258153 , 0.0 , 799.7814665466941 ] )  rotate( [0.0  , 164.0 , 0.0 ] ) scale( [ 1.0 , 1.0 , 1.0 ] ) cylinder( 110.0 , 12.7, 12.7 ) ;
+    
+    translate( [ 437.91064500258153 - 0.01 , 0.0 - 0.01 , 799.7714665466941 ] )  rotate( [0.0  , 164.0 , 0.0 ] ) scale( [ 1.0 , 1.0 , 1.0 ] )  cylinder( 110.0 + 0.02, 12.6, 12.6 ) ;
+
+    }
+
+
+        
+// steererTubeTop.drawPolar
+
+difference(){
+    
+    color("#C0C0C0")  translate( [ 437.91064500258153 , 0.0 , 799.7814665466941 ] )  rotate( [0.0  , -16.0 , 0.0 ] ) scale( [ 1.0 , 1.0 , 1.0 ] ) cylinder( 100.0 , 12.7, 12.7 ) ;
+    
+    translate( [ 437.91064500258153 - 0.01 , 0.0 - 0.01 , 799.7714665466941 ] )  rotate( [0.0  , -16.0 , 0.0 ] ) scale( [ 1.0 , 1.0 , 1.0 ] )  cylinder( 100.0 + 0.02, 12.6, 12.6 ) ;
+
+    }
+
+
+        
+// steererTubeBottom.drawPolar
+
+difference(){
+    
+    color("#C0C0C0")  translate( [ 454.44888635160146 , 0.0 , 742.1057647903949 ] )  rotate( [0.0  , 164.0 , 0.0 ] ) scale( [ 1.0 , 1.0 , 1.0 ] ) cylinder( 60.0 , 12.7, 12.7 ) ;
+    
+    translate( [ 454.44888635160146 - 0.01 , 0.0 - 0.01 , 742.0957647903949 ] )  rotate( [0.0  , 164.0 , 0.0 ] ) scale( [ 1.0 , 1.0 , 1.0 ] )  cylinder( 60.0 + 0.02, 12.6, 12.6 ) ;
+
+    }
+
+
+
+// forkCrown.draw  
+
+color("#D503FF") forkCrown( 470.9871277006214 , 0.0 , 684.4300630340958 , 164  );
+
+
+
+// rightForkEnd.draw 
+
+color("#D503FF") forkEnd(616.8834051346756 ,  -50.0 , 350.0 );
+
+
+        
+// rightFork.drawRect
+
+difference(){
+    
+    color("#D503FF") translate( [ 470.9871277006214 , -45.0 , 684.4300630340958 ] )  rotate( [0.0  , 156.2295417683522 , -2.0690899995500405 ] )  scale( [ 1.0 , 1.0 , 1.0 ] ) cylinder( 343.57647496187684 , 11.0, 9.0 ) ;
+    
+    translate( [ 470.9871277006214 - 0.01 , -45.0 - 0.01 , 684.4200630340958 ] )  rotate( [0.0  , 156.2295417683522 , -2.0690899995500405 ] ) scale( [ 1.0 , 1.0 , 1.0 ] ) cylinder( 343.57647496187684 + 0.02, 10.9, 8.9 ) ;
+
+    }
+
+
+
+// leftForkEnd.draw 
+
+color("#D503FF") forkEnd(616.8834051346756 ,  50.0 , 350.0 );
+
+
+        
+// leftFork.drawRect
+
+difference(){
+    
+    color("#D503FF") translate( [ 470.9871277006214 , 45.0 , 684.4300630340958 ] )  rotate( [0.0  , 156.2295417683522 , 2.0690899995500405 ] )  scale( [ 1.0 , 1.0 , 1.0 ] ) cylinder( 343.57647496187684 , 11.0, 9.0 ) ;
+    
+    translate( [ 470.9871277006214 - 0.01 , 45.0 - 0.01 , 684.4200630340958 ] )  rotate( [0.0  , 156.2295417683522 , 2.0690899995500405 ] ) scale( [ 1.0 , 1.0 , 1.0 ] ) cylinder( 343.57647496187684 + 0.02, 10.9, 8.9 ) ;
+
+    }
+
+
+ 
+wheel(616.8834051346756 ,700 , 100 );
+ 
+ 
+
+// End of bike.scad
+
